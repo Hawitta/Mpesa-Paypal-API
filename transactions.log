@@ -9,3 +9,21 @@
 {"requestId": "1c5b-4ba8-815c-ac45c57a3db01697392", "errorCode": "500.001.1001", "errorMessage": "Wrong credentials"}
 {"MerchantRequestID": "7071-4170-a0e4-8345632bad441693701", "CheckoutRequestID": "ws_CO_24072024182431734743269238", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}
 {"MerchantRequestID": "2654-4b64-97ff-b827b542881d241705", "CheckoutRequestID": "ws_CO_24072024182223609743269238", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}
+{"requestId": "c62b-4e23-a479-5f74de8082a1907206", "errorCode": "400.002.02", "errorMessage": "Bad Request - Invalid PhoneNumber"}
+{"requestId": "6543-425e-a177-2e84b1462ecd906008", "errorCode": "400.002.02", "errorMessage": "Bad Request - Invalid PhoneNumber"}
+{"requestId": "6543-425e-a177-2e84b1462ecd906011", "errorCode": "500.003.02", "errorMessage": "System is busy. Please try again in few minutes."}
+{"requestId": "c62b-4e23-a479-5f74de8082a1907227", "errorCode": "400.002.02", "errorMessage": "Bad Request - Invalid PhoneNumber"}
+{"requestId": "6543-425e-a177-2e84b1462ecd906082", "errorCode": "400.002.02", "errorMessage": "Bad Request - Invalid CallBackURL"}
+{"MerchantRequestID": "c62b-4e23-a479-5f74de8082a1907302", "CheckoutRequestID": "ws_CO_06022025171746703703961456", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}
+{"requestId": "6543-425e-a177-2e84b1462ecd906101", "errorCode": "500.001.1001", "errorMessage": "Unable to lock subscriber, a transaction is already in process for the current subscriber"}
+{"MerchantRequestID": "c62b-4e23-a479-5f74de8082a1907373", "CheckoutRequestID": "ws_CO_06022025171917935703961456", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}
+{"MerchantRequestID": "b54f-471d-93d9-f7f3bf3f7c0e2391900", "CheckoutRequestID": "ws_CO_06022025175102631703961456", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}
+{"MerchantRequestID": "bbcd-4a89-bd1a-6ecdc639893b2391073", "CheckoutRequestID": "ws_CO_06022025183852926722497605", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}
+{"requestId": "6543-425e-a177-2e84b1462ecd908659", "errorCode": "500.001.1001", "errorMessage": "Unable to lock subscriber, a transaction is already in process for the current subscriber"}
+{"MerchantRequestID": "c62b-4e23-a479-5f74de8082a1909905", "CheckoutRequestID": "ws_CO_06022025184035214725176763", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}
+{"requestId": "b54f-471d-93d9-f7f3bf3f7c0e2413792", "errorCode": "400.002.02", "errorMessage": "Bad Request - Invalid TransactionType"}
+{"requestId": "6543-425e-a177-2e84b1462ecd935975", "errorCode": "400.002.02", "errorMessage": "Bad Request - Invalid TransactionType"}
+{"requestId": "bbcd-4a89-bd1a-6ecdc639893b2411465", "errorCode": "400.002.02", "errorMessage": "Bad Request - Invalid TransactionType"}
+{"requestId": "c62b-4e23-a479-5f74de8082a1937250", "errorCode": "400.002.02", "errorMessage": "Bad Request - Invalid TransactionType"}
+{"MerchantRequestID": "bbcd-4a89-bd1a-6ecdc639893b2411594", "CheckoutRequestID": "ws_CO_07022025095356426703961456", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}
+{"MerchantRequestID": "5fe8-4261-87f6-6d7d41adc6c3615682", "CheckoutRequestID": "ws_CO_07022025095558983703961456", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}

@@ -1,0 +1,11 @@
+- M-Pesa only accepts specific values for "Transaction type" in STK push
+
+
+Transaction Type	         Description
+"CustomerPayBillOnline"	    Used when customers pay via PayBill number
+"CustomerBuyGoodsOnline"	Used when customers pay via Till Number
+
+Feature	            STK Push	        B2B API
+Who Initiates?	    Customer	        Business
+Transaction Types?	PayBill, Buy Goods	PayBill, Bank, Business
+Phone Required?	Yes (customer's phone)	No (business pays directly)
