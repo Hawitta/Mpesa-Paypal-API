@@ -7,7 +7,6 @@ This repository demonstrates how to integrate M-Pesa STK (Sim Tool Kit) payment 
 
 ## Features
 
-- **Wi-Fi Subscription Plans**: Offers three different subscription plans with varying prices.
 - **M-Pesa STK Push Integration**: Initiates payment requests to M-Pesa and handles responses.
 - **Transaction Logging**: Logs transaction details for successful and failed transactions.
 - **Error Handling**: Displays errors and success messages to users.
@@ -23,7 +22,7 @@ This repository demonstrates how to integrate M-Pesa STK (Sim Tool Kit) payment 
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/Griffins-Mbae/Mpesa-stk-python-flask.git
+    git clone https://github.com/Hawitta/Mpesa-Paypal-API.git
     cd Mpesa-stk-python-flask
     ```
 
