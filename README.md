@@ -57,13 +57,14 @@ This repository demonstrates how to integrate M-Pesa STK (Sim Tool Kit) payment 
 
 ## File Structure
 
-- `app.py`: Main Flask application file with routes and M-Pesa integration logic.
-- `templates/`
-  - `index.html`: Subscription plans page.
-  - `callback.html`: Page to display transaction statuses.
-- `static/`
-  - `css/`: Tailwind CSS files.
-  - `js/`: JavaScript files for frontend functionality.
+1. Run the Flask application:
+    ```sh
+    python app.py
+    ```
+
+2. Open your web browser and navigate to `http://127.0.0.1:5000/` to access the subscription page.
+
+3. Enter your amount of payment for paypal payment.
 
 ## Endpoints
 
