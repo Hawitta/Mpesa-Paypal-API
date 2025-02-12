@@ -13,11 +13,11 @@ app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 load_dotenv()
 
 # M-Pesa credentials
-consumer_key = os.getenv("CONSUMER_KEY")
-consumer_secret = os.getenv("CONSUMER_SECRET")
-shortcode = ''
-passkey = os.getenv("PASSKEY")
-callback_url = 'https://4d95-41-90-184-64.ngrok-free.app'
+consumer_key = os.getenv("MPESA_CONSUMER_KEY")
+consumer_secret = os.getenv("MPESA_CONSUMER_SECRET")
+shortcode = os.getenv("MPESA_SHORTCODE")
+passkey = os.getenv("MPESA_PASSKEY")
+callback_url =  os.getenv("CALLBACK_URL")
 
 
 def generate_oauth_token():
