@@ -1,7 +1,7 @@
 
 ---
 
-# M-Pesa STK Integration with Python and Flask
+# M-Pesa STK and Paypal Integration with Flask
 
 This repository demonstrates how to integrate M-Pesa STK (Sim Tool Kit) payment functionality using Python and Flask. The application allows users to subscribe to different Wi-Fi plans and processes payments through the M-Pesa API. It also handles and logs transaction statuses and provides error handling.
 
