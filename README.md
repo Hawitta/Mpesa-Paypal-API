@@ -1,86 +1,127 @@
+# Mpesa & PayPal Payment API
 
----
-
-# M-Pesa STK and Paypal Integration with Flask
-
-This repository demonstrates how to integrate M-Pesa STK (Sim Tool Kit) payment functionality using Python and Flask. The application allows users to subscribe to different Wi-Fi plans and processes payments through the M-Pesa API. It also handles and logs transaction statuses and provides error handling.
+## Overview
+This project is an API that integrates M-Pesa and PayPal payment processing. It allows users to initiate transactions via M-Pesa STK Push and PayPal payments, ensuring a seamless payment experience.
 
 ## Features
+- **M-Pesa STK Push**: Users can pay via Safaricom's M-Pesa using STK Push.
+- **PayPal Integration**: Users can make payments through PayPal.
+- **Webhook Support**: Receives payment confirmation callbacks from M-Pesa and PayPal.
+- **RESTful API Endpoints**: Supports JSON-based communication.
+- **Logging and Error Handling**: Logs transaction details and errors for debugging.
 
-- **M-Pesa STK Push Integration**: Initiates payment requests to M-Pesa and handles responses.
-- **Transaction Logging**: Logs transaction details for successful and failed transactions.
-- **Error Handling**: Displays errors and success messages to users.
-- **Responsive Design**: Frontend built with Tailwind CSS for a modern and responsive user experience.
+## Technologies Used
+- **Backend**: Flask (Python) for M-Pesa and PayPal transaction processing.
+- **Frontend (if applicable)**: Ruby on Rails API for handling payment requests.
+- **Database**: PostgreSQL/MySQL (Optional for storing transactions).
+- **APIs**:
+  - M-Pesa Daraja API
+  - PayPal REST API
+- **Deployment**: Ngrok for local API tunneling, Heroku/AWS for production.
 
-## Prerequisites
-
-- Python 3.6+
+## Installation & Setup
+### Prerequisites
+- Python 3.8+
 - Flask
-- Requests library
+- Ruby on Rails
+- Ngrok (for local testing)
+- A registered Safaricom M-Pesa Daraja API account
+- A PayPal Developer account
 
-## Installation
+### Clone the Repository
+```bash
+git clone https://github.com/Hawitta/Mpesa-Paypal-API.git
+cd Mpesa-Paypal-API
+```
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/Hawitta/Mpesa-Paypal-API.git
-    cd Mpesa-stk-python-flask
-    ```
+### Setup Environment Variables
+Create a `.env` file in the project root and add the following:
+```ini
+# M-Pesa Credentials
+MPESA_CONSUMER_KEY=your_mpesa_consumer_key
+MPESA_CONSUMER_SECRET=your_mpesa_consumer_secret
+MPESA_PASSKEY=your_mpesa_passkey
+MPESA_SHORTCODE=your_mpesa_shortcode
+CALLBACK_URL=https://your-ngrok-url/mpesa/callback
 
-2. Install the required Python packages:
-    ```sh
-    pip install -r requirements.txt
-    ```
+# PayPal Credentials
+PAYPAL_CLIENT_ID=your_paypal_client_id
+PAYPAL_SECRET=your_paypal_secret
+PAYPAL_MODE=sandbox  # Use 'live' in production
+```
 
-## Configuration
+### Install Dependencies
+For Flask:
+```bash
+pip install -r requirements.txt
+```
+For Rails:
+```bash
+bundle install
+```
 
-1. Update the M-Pesa credentials in `app.py`:
-    ```python
-    consumer_key = 'your_consumer_key'
-    consumer_secret = 'your_consumer_secret'
-    shortcode = 'your_shortcode'
-    passkey = 'your_passkey'
-    callback_url = 'your_callback_url'
-    ```
+## Running the Application
+Start the Flask API:
+```bash
+python app.py
+```
+Start the Rails API:
+```bash
+rails server
+```
 
-2. Ensure your callback URL is accessible and correctly configured to handle M-Pesa callbacks.
+## API Endpoints
+### 1. M-Pesa Payment
+**Initiate STK Push**
+```http
+POST /subscribe
+```
+**Request Body:**
+```json
+{
+  "phone_number": "254712345678",
+  "amount": 100
+}
+```
 
-## Usage
+### 2. PayPal Payment
+**Create PayPal Payment**
+```http
+POST /create-payment
+```
+**Request Body:**
+```json
+{
+  "amount": 50.00
+}
+```
 
-1. Run the Flask application:
-    ```sh
-    python app.py
-    ```
+**Execute PayPal Payment**
+```http
+POST /execute-payment
+```
+**Request Body:**
+```json
+{
+  "payment_id": "PAY-12345678",
+  "payer_id": "PAYER-987654"
+}
+```
 
-2. Open your web browser and navigate to `http://127.0.0.1:5000/` to access the subscription page.
+## Testing with Ngrok & ThunderClient
+1. Start Ngrok:
+   ```bash
+   ngrok http 5000
+   ```
+2. Use the Ngrok URL in your `.env` file.
+3. Use ThunderClient/Postman to test API endpoints.
 
-3. Enter your phone number and select a subscription plan to initiate the M-Pesa STK Push payment.
-
-## File Structure
-
-1. Run the Flask application:
-    ```sh
-    python app.py
-    ```
-
-2. Open your web browser and navigate to `http://127.0.0.1:5000/` to access the subscription page.
-
-3. Enter your amount of payment for paypal payment.
-
-## Endpoints
-
-- `/`: Main page displaying subscription plans.
-- `/subscribe`: Endpoint to handle subscription form submissions and initiate M-Pesa payments.
-- `/mpesa/callback`: Endpoint to handle M-Pesa payment callbacks.
+## Deployment
+For production, deploy the Flask API to Heroku or AWS Lambda and the Rails API to a cloud server.
 
 ## License
+This project is open-source and available under the MIT License.
 
-This project is licensed under the MIT License.
-
-## Acknowledgments
-
-- [Safaricom Developers](https://developer.safaricom.co.ke) for M-Pesa API documentation and support.
-- [Flask](https://flask.palletsprojects.com) for providing a simple and powerful web framework.
-- [Tailwind CSS](https://tailwindcss.com) for modern and responsive design capabilities.
-
----
+## Contributors
+- **Hawiana Abebe Bedada** ([@Hawitta](https://github.com/Hawitta))
 
